@@ -1,0 +1,111 @@
+:root {
+    --dark-blue: #1C274C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark-blue);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#volume {
+    width: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 15px;
+    cursor: pointer;
+}
+
+#resetBtn {
+    margin: 10px;
+    padding: 5px 10px;
+    border: 1px solid var(--dark-blue);
+    border-radius: 5px;
+    background-color: #caaffc;
+    font-size: large;
+    transition: 0.2s;
+}
+
+#resetBtn:hover {
+    background-color: #d4bfff;
+    border-color: #caaffc;
+    cursor: pointer;
+}
+
+#stats {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin: 10px 0;
+}
+
+.card {
+    /* center card images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* mobile width */
+    width: 20vw;
+    height: 20vw; 
+
+    /* desktop width */
+    max-width: 100px;
+    max-height: 100px;
+
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: transform 0.6s; /* Smooth flip animation */
+    cursor: pointer;
+
+    background-image: url(images/card-back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card img {
+    width: 15vw; /* mobile */
+    max-width: 80px; /* desktop */
+    visibility: hidden;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+    background: none;
+    background-color: white;
+}
+
+.flipped img {
+    visibility: visible;
+}
+
+.matched {
+    border: 0px;
+    background: none;
+}
