@@ -1,0 +1,1 @@
+html,body,#root,#root>div{height:100%;margin:0}.calculator{width:90%}.display{overflow:hidden}.operator{height:84px}@media screen and (min-width: 560px){.calculator{width:60%}}@media screen and (min-width: 760px){.calculator{width:50%}.operator{height:auto}}@media screen and (min-width: 960px){.calculator{width:40%}.operator{height:auto}}
